@@ -26,13 +26,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  --theme-color:rgb(49, 34, 252);
-  --techicons-color-purple:invert(25%) sepia(100%) saturate(6105%) hue-rotate(246deg) brightness(101%) contrast(102%);
-  --techicons-color-white:invert(100%) sepia(0%) saturate(1%) hue-rotate(163deg) brightness(107%) contrast(101%);
+  --theme-color: rgb(49, 34, 252);
+  --techicons-color-purple: invert(25%) sepia(100%) saturate(6105%)
+    hue-rotate(246deg) brightness(101%) contrast(102%);
+  --techicons-color-white: invert(100%) sepia(0%) saturate(1%)
+    hue-rotate(163deg) brightness(107%) contrast(101%);
 }
 
 .container {
-  height: 100vh;
+  min-height: 100vh;
   background-color: black;
   width: 100%;
   overflow: hidden;
@@ -63,7 +65,7 @@ body {
 }
 
 .landing:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -75,7 +77,7 @@ body {
 }
 
 .landing:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -110,12 +112,12 @@ body {
 
 .landing .intro .header {
   color: white;
-  font-family: 'Montserrat',sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .landing .intro .header span {
-  -webkit-transition: color .5s linear;
-  transition: color .5s linear;
+  -webkit-transition: color 0.5s linear;
+  transition: color 0.5s linear;
 }
 
 .landing .intro .header span.neg {
@@ -153,7 +155,7 @@ body {
 }
 
 .landing .intro div:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 100%;
@@ -167,7 +169,7 @@ body {
 .landing .info-typed {
   z-index: 3;
   color: white;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 1.2rem;
   margin-top: 5rem;
 }
@@ -191,7 +193,7 @@ body {
 
 .landing .more-info:after {
   position: absolute;
-  content: '';
+  content: "";
   left: 30%;
   top: -10%;
   bottom: -10%;
@@ -245,7 +247,7 @@ body {
 
 .techstack h1 {
   color: white;
-  font-family: 'Montserrat',sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   z-index: 1;
   position: relative;
@@ -253,7 +255,7 @@ body {
 
 .techstack h1:before {
   position: absolute;
-  content: '';
+  content: "";
   top: 50%;
   border-radius: 50%;
   bottom: -30%;
@@ -286,8 +288,8 @@ body {
 
 .techstack .technologies .tech-icons {
   position: relative;
-  width: 50vmin;
-  height: 50vmin;
+  width: 30vmax;
+  height: 30vmax;
   margin-top: 1rem;
 }
 
@@ -300,10 +302,10 @@ body {
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
-  -webkit-transition: -webkit-filter .2s linear;
-  transition: -webkit-filter .2s linear;
-  transition: filter .2s linear;
-  transition: filter .2s linear, -webkit-filter .2s linear;
+  -webkit-transition: -webkit-filter 0.2s linear;
+  transition: -webkit-filter 0.2s linear;
+  transition: filter 0.2s linear;
+  transition: filter 0.2s linear, -webkit-filter 0.2s linear;
   -webkit-filter: var(--techicons-color-white);
           filter: var(--techicons-color-white);
 }
@@ -316,7 +318,7 @@ body {
 .techstack .technologies .tech-icons .centered-name {
   color: white;
   position: absolute;
-  font-family: 'Montserrat',sans-serif;
+  font-family: "Montserrat", sans-serif;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -326,7 +328,7 @@ body {
 }
 
 .techstack .technologies .tech-icons .centered-name:before {
-  content: '';
+  content: "";
   position: absolute;
   -webkit-transform: scale(5);
           transform: scale(5);
@@ -338,6 +340,44 @@ body {
   z-index: -1;
   -webkit-filter: blur(10px);
           filter: blur(10px);
+}
+
+.projects .rocket-wrapper .rocket {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  width: 10vmax;
+  height: 10vmax;
+  position: relative;
+  z-index: 1;
+}
+
+.projects .rocket-wrapper .rocket:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-position: center;
+  background-size: contain;
+  background-image: url("../assets/images/rocket.svg");
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.projects .rocket-wrapper .rocket:before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: -35%;
+  width: 50%;
+  height: 20%;
+  background-position: center;
+  background-size: contain;
+  background-image: url("../assets/images/fire.svg");
+  background-repeat: no-repeat;
+  z-index: -1;
+  animation: scaleWave .6s linear infinite alternate-reverse;
 }
 
 .icon-highlight {
@@ -413,6 +453,28 @@ body {
   }
   75% {
     border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+  }
+}
+
+@-webkit-keyframes scaleWave {
+  from {
+    -webkit-transform: scale(1) scaleX(1);
+            transform: scale(1) scaleX(1);
+  }
+  to {
+    -webkit-transform: scale(1.1) scaleX(1.1);
+            transform: scale(1.1) scaleX(1.1);
+  }
+}
+
+@keyframes scaleWave {
+  from {
+    -webkit-transform: scale(1) scaleX(1);
+            transform: scale(1) scaleX(1);
+  }
+  to {
+    -webkit-transform: scale(1.1) scaleX(1.1);
+            transform: scale(1.1) scaleX(1.1);
   }
 }
 /*# sourceMappingURL=style.css.map */

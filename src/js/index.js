@@ -7,6 +7,7 @@ window.addEventListener("load", () => {
   initLandingPageAnimations();
   initTechPageAnimations(controller);
   placeTechIconsInHexagon(controller);
+  animateRocket(controller);
 
 
 });
@@ -143,7 +144,7 @@ function placeTechIconsInHexagon(controller) {
 
   const scene = new ScrollMagic.Scene({
     triggerElement: ".techstack",
-    triggerHook: 0.2,
+    triggerHook: 0.4,
   })
     .setTween(cicrleTechAnim)
     .addTo(controller);
@@ -152,13 +153,30 @@ function placeTechIconsInHexagon(controller) {
 function placeInNewAngle(icons, angleCount, radius) {
   for ([index, icon] of icons.entries()) {
     const angle = (angleCount.count * index * Math.PI) / 180;
-    console.log(angle);
     const posX = Math.round(radius * Math.sin(angle));
     const posY = Math.round(radius * Math.cos(angle));
 
     icon.style.top = radius - posY - icon.clientHeight / 2 + "px";
     icon.style.left = radius - posX - icon.clientWidth / 2 + "px";
   }
+}
+
+function animateRocket(controller) {
+
+    const element = document.querySelector('.container.projects');
+    console.log(element);
+
+    const rocket = document.querySelector('.projects .rocket-wrapper .rocket');
+    
+      const tween = gsap.timeline().to(rocket,{x:window.innerWidth + rocket.clientWidth,ease:Power1.easeOut,duration:1});
+ 
+    const scene = new ScrollMagic.Scene({
+        triggerHook:1,
+        triggerElement:element,
+        duration:"100%"
+    })
+    .setTween(tween)
+    .addTo(controller);
 }
 
 function delay() {
