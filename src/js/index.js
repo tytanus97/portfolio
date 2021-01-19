@@ -9,6 +9,8 @@ window.addEventListener("load", () => {
   placeTechIconsInHexagon(controller);
   animateRocket(controller);
 
+  initIndicatorIcon();
+
 
 });
 
@@ -171,12 +173,22 @@ function animateRocket(controller) {
       const tween = gsap.timeline().to(rocket,{x:window.innerWidth + rocket.clientWidth,ease:Power1.easeOut,duration:1});
  
     const scene = new ScrollMagic.Scene({
-        triggerHook:1,
+        triggerHook:0.8,
         triggerElement:element,
         duration:"100%"
     })
     .setTween(tween)
     .addTo(controller);
+}
+
+function initIndicatorIcon() {
+  const indicator = document.querySelector('.more-indicator .indicator');
+  const tech = document.querySelector('.container.techstack');
+  console.log(indicator);
+
+  indicator.addEventListener('click', (e) => {
+    window.scrollTo({left:0,top:tech.clientHeight,behavior:"smooth"});
+  })
 }
 
 function delay() {
