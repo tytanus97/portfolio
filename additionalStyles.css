@@ -1,72 +1,66 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Montserrat&display=swap);
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 html {
   font-size: 16px;
-  font-family: "Montserrat",Helvetica,sans-serif;
 }
-
 body {
   width: 100%;
-  background-color: white;
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   --theme-color: rgb(49, 34, 252);
   --techicons-color-purple: invert(25%) sepia(100%) saturate(6105%)
     hue-rotate(246deg) brightness(101%) contrast(102%);
   --techicons-color-white: invert(100%) sepia(0%) saturate(1%)
     hue-rotate(163deg) brightness(107%) contrast(101%);
 }
-
 .container {
   min-height: 100vh;
-  background-color: black;
+  background-color: #000;
   width: 100%;
   overflow: hidden;
 }
-
 .landing {
-  background: black;
+  background: #000;
   width: 100%;
   -webkit-transform: scaleX(0) scaleY(0.005);
-          transform: scaleX(0) scaleY(0.005);
+  transform: scaleX(0) scaleY(0.005);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
   z-index: 3;
 }
-
 .landing:before {
   content: "";
   position: absolute;
@@ -75,10 +69,9 @@ body {
   bottom: 0;
   right: 0;
   opacity: 0;
-  background: url("../assets/images/sunrise2.jpg");
+  background: url(../assets/images/sunrise2.jpg);
   background-size: cover;
 }
-
 .landing:after {
   content: "";
   position: absolute;
@@ -89,7 +82,6 @@ body {
   background: rgba(0, 0, 0, 0.6);
   background-size: cover;
 }
-
 .landing .intro {
   z-index: 3;
   position: relative;
@@ -97,67 +89,58 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   width: 50%;
   padding-bottom: 2rem;
   margin-bottom: 2rem;
 }
-
 .landing .intro .header {
-  color: white;
-  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
 }
-
 .landing .intro .header span {
   -webkit-transition: color 0.5s linear;
   transition: color 0.5s linear;
 }
-
 .landing .intro .header span.neg {
   color: #4437fd;
 }
-
 .landing .intro .header:hover .pos {
   color: #4437fd;
 }
-
 .landing .intro .header:hover .neg {
-  color: white;
+  color: #fff;
 }
-
 .landing .intro h1.header {
   font-size: 3.5rem;
   margin: 3rem 0 1rem 0;
   opacity: 0;
 }
-
 .landing .intro h2.header {
   font-size: 2rem;
   font-weight: lighter;
   opacity: 0;
 }
-
 .landing .intro div {
   font-size: 1.5rem;
   position: relative;
   height: 1.7rem;
   opacity: 0;
   min-width: 10px;
-  color: white;
+  color: #fff;
   margin-top: 2rem;
 }
-
 .landing .intro div:after {
   content: "";
   position: absolute;
@@ -165,35 +148,30 @@ body {
   left: 100%;
   bottom: 0;
   right: -2px;
-  background-color: white;
+  background-color: #fff;
   -webkit-animation: blink 1s linear infinite;
-          animation: blink 1s linear infinite;
+  animation: blink 1s linear infinite;
 }
-
 .landing .info-typed {
   z-index: 3;
-  color: white;
-  font-family: "Montserrat",sans-serif;
+  color: #fff;
+  font-family: Montserrat;
   font-size: 1.2rem;
 }
-
 .landing .more-info {
   z-index: 3;
   position: relative;
-  color: white;
+  color: #fff;
   text-align: center;
   width: 50%;
   opacity: 0;
-  font-family: "Montserrat",sans-serif;
   font-size: 1.2rem;
 }
-
 .landing .more-info p {
   margin: 1rem auto;
   width: 100%;
   text-align: center;
 }
-
 .landing .more-info:after {
   position: absolute;
   content: "";
@@ -206,20 +184,17 @@ body {
   z-index: -1;
   animation: morph 10s linear alternate-reverse infinite;
 }
-
 .landing .more-indicator {
   display: block;
   z-index: 3;
   margin-top: 5rem;
 }
-
 .landing .more-indicator h3 {
-  color: white;
+  color: #fff;
   position: relative;
 }
-
 .landing .more-indicator h3:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 100%;
   bottom: -2px;
@@ -227,19 +202,16 @@ body {
   right: -10px;
   background-color: var(--theme-color);
 }
-
 .landing .more-indicator .indicator {
   margin: 3rem auto;
   width: 50%;
   -webkit-filter: var(--techicons-color-purple);
-          filter: var(--techicons-color-purple);
+  filter: var(--techicons-color-purple);
   animation: indicate 1s ease-in-out infinite alternate-reverse;
 }
-
 .landing .more-indicator .indicator:hover {
   cursor: pointer;
 }
-
 .techstack {
   padding: 2rem;
   position: relative;
@@ -248,47 +220,42 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   z-index: 1;
 }
-
 .techstack .side {
   width: 30%;
   -webkit-animation: rotate 10s linear infinite;
-          animation: rotate 10s linear infinite;
+  animation: rotate 10s linear infinite;
 }
-
 .techstack .mars {
   position: absolute;
   top: 10%;
   left: 0;
   -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
 }
-
 .techstack .earth {
   position: absolute;
   top: 30%;
   right: 0;
   -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  transform: translateX(100%);
 }
-
 .techstack h1 {
-  color: white;
-  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
   font-size: 2rem;
   z-index: 1;
   position: relative;
 }
-
 .techstack h1:before {
   position: absolute;
   content: "";
@@ -297,13 +264,24 @@ body {
   bottom: -30%;
   left: -50%;
   right: -50%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(50%, var(--theme-color)), to(rgba(0, 0, 0, 0)));
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, var(--theme-color) 50%, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(0, 0, 0, 0)),
+    color-stop(50%, var(--theme-color)),
+    to(rgba(0, 0, 0, 0))
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0,
+    var(--theme-color) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
   z-index: -1;
   -webkit-filter: blur(10px);
-          filter: blur(10px);
+  filter: blur(10px);
 }
-
 .techstack .technologies {
   height: 100%;
   width: 100%;
@@ -312,62 +290,57 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
-
 .techstack .technologies .tech-icons {
   position: relative;
   width: 30vmax;
   height: 30vmax;
   margin-top: 1rem;
 }
-
 .techstack .technologies .tech-icons .icon {
   z-index: 3;
   position: absolute;
   width: 15%;
   -webkit-transform: scale(0.01);
-          transform: scale(0.01);
+  transform: scale(0.01);
   opacity: 0;
   -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
   -webkit-transition: -webkit-filter 0.2s linear;
   transition: -webkit-filter 0.2s linear;
   transition: filter 0.2s linear;
   transition: filter 0.2s linear, -webkit-filter 0.2s linear;
   -webkit-filter: var(--techicons-color-white);
-          filter: var(--techicons-color-white);
+  filter: var(--techicons-color-white);
 }
-
 .techstack .technologies .tech-icons .icon:hover {
   -webkit-filter: var(--techicons-color-purple);
-          filter: var(--techicons-color-purple);
+  filter: var(--techicons-color-purple);
 }
-
 .techstack .technologies .tech-icons .centered-name {
-  color: white;
+  color: #fff;
   position: absolute;
-  font-family: "Montserrat", sans-serif;
+  font-family: Montserrat, sans-serif;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   -webkit-transition: all 1s linear;
   transition: all 1s linear;
 }
-
 .techstack .technologies .tech-icons .centered-name:before {
   content: "";
   position: absolute;
   -webkit-transform: scale(5);
-          transform: scale(5);
+  transform: scale(5);
   top: 0;
   left: 0;
   bottom: 0;
@@ -375,20 +348,18 @@ body {
   background: radial-gradient(var(--theme-color), rgba(0, 0, 0, 0));
   z-index: -1;
   -webkit-filter: blur(10px);
-          filter: blur(10px);
+  filter: blur(10px);
 }
-
 .projects .rocket-wrapper .rocket {
   -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
   width: 10vmax;
   height: 10vmax;
   position: relative;
   z-index: 1;
 }
-
 .projects .rocket-wrapper .rocket:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -396,11 +367,10 @@ body {
   right: 0;
   background-position: center;
   background-size: contain;
-  background-image: url("../assets/images/rocket.svg");
+  background-image: url(../assets/images/rocket.svg);
   background-repeat: no-repeat;
   z-index: 1;
 }
-
 .projects .rocket-wrapper .rocket:before {
   content: "";
   position: absolute;
@@ -410,22 +380,19 @@ body {
   height: 20%;
   background-position: center;
   background-size: contain;
-  background-image: url("../assets/images/fire.svg");
+  background-image: url(../assets/images/fire.svg);
   background-repeat: no-repeat;
   z-index: -1;
-  animation: scaleWave .6s linear infinite alternate-reverse;
+  animation: scaleWave 0.6s linear infinite alternate-reverse;
 }
-
 .icon-highlight {
   -webkit-filter: var(--techicons-color-purple);
-          filter: var(--techicons-color-purple);
+  filter: var(--techicons-color-purple);
 }
-
 .icon-no-highlight {
   -webkit-filter: var(--techicons-color-white);
-          filter: var(--techicons-color-white);
+  filter: var(--techicons-color-white);
 }
-
 @-webkit-keyframes blink {
   from {
     opacity: 0;
@@ -434,7 +401,6 @@ body {
     opacity: 1;
   }
 }
-
 @keyframes blink {
   from {
     opacity: 0;
@@ -443,7 +409,6 @@ body {
     opacity: 1;
   }
 }
-
 @-webkit-keyframes moveBg {
   from {
     background-position: 100%;
@@ -452,7 +417,6 @@ body {
     background-position: -100%;
   }
 }
-
 @keyframes moveBg {
   from {
     background-position: 100%;
@@ -461,86 +425,79 @@ body {
     background-position: -100%;
   }
 }
-
 @-webkit-keyframes morph {
   0% {
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
   }
   25% {
-    border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+    border-radius: 58% 42% 75% 25%/76% 46% 54% 24%;
   }
   50% {
-    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+    border-radius: 50% 50% 33% 67%/55% 27% 73% 45%;
   }
   75% {
-    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+    border-radius: 33% 67% 58% 42%/63% 68% 32% 37%;
   }
 }
-
 @keyframes morph {
   0% {
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
   }
   25% {
-    border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+    border-radius: 58% 42% 75% 25%/76% 46% 54% 24%;
   }
   50% {
-    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+    border-radius: 50% 50% 33% 67%/55% 27% 73% 45%;
   }
   75% {
-    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+    border-radius: 33% 67% 58% 42%/63% 68% 32% 37%;
   }
 }
-
 @-webkit-keyframes scaleWave {
   from {
     -webkit-transform: scale(1) scaleX(1);
-            transform: scale(1) scaleX(1);
+    transform: scale(1) scaleX(1);
   }
   to {
     -webkit-transform: scale(1.1) scaleX(1.1);
-            transform: scale(1.1) scaleX(1.1);
+    transform: scale(1.1) scaleX(1.1);
   }
 }
-
 @keyframes scaleWave {
   from {
     -webkit-transform: scale(1) scaleX(1);
-            transform: scale(1) scaleX(1);
+    transform: scale(1) scaleX(1);
   }
   to {
     -webkit-transform: scale(1.1) scaleX(1.1);
-            transform: scale(1.1) scaleX(1.1);
+    transform: scale(1.1) scaleX(1.1);
   }
 }
-
 @-webkit-keyframes indicate {
   from {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     -webkit-filter: var(--techicons-color-purple);
-            filter: var(--techicons-color-purple);
+    filter: var(--techicons-color-purple);
   }
   to {
     -webkit-transform: translateY(50%);
-            transform: translateY(50%);
+    transform: translateY(50%);
     -webkit-filter: var(--techicons-color-white);
-            filter: var(--techicons-color-white);
+    filter: var(--techicons-color-white);
   }
 }
-
 @keyframes indicate {
   from {
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
     -webkit-filter: var(--techicons-color-purple);
-            filter: var(--techicons-color-purple);
+    filter: var(--techicons-color-purple);
   }
   to {
     -webkit-transform: translateY(50%);
-            transform: translateY(50%);
+    transform: translateY(50%);
     -webkit-filter: var(--techicons-color-white);
-            filter: var(--techicons-color-white);
+    filter: var(--techicons-color-white);
   }
 }
-/*# sourceMappingURL=style.css.map */

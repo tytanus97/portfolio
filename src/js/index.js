@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
 
 function initLandingPageAnimations() {
   const bg = CSSRulePlugin.getRule(".landing:before");
-  const other = CSSRulePlugin.getRule(":not(div.landing)");
+
   const info_p = CSSRulePlugin.getRule(".landing .intro div");
 
   const t1 = gsap.timeline();
@@ -183,7 +183,7 @@ function animateRocket(controller) {
 
 function initIndicatorIcon() {
   const indicator = document.querySelector('.more-indicator .indicator');
-  const tech = document.querySelector('.container.techstack');
+  const tech = document.querySelector('.container.landing');
   console.log(indicator);
 
   indicator.addEventListener('click', (e) => {
